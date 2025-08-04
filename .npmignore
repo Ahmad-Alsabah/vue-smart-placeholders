@@ -1,0 +1,6 @@
+examples/
+src/
+rollup.config.js
+README-vue-smart-placeholders.txt
+*.log
+*.sh
