@@ -1,12 +1,3 @@
-const smartPlaceholderDirective = {
-  mounted(el) {
-    applySmartPlaceholder(el);
-  },
-  inserted(el) {
-    applySmartPlaceholder(el);
-  },
-};
-
 function applySmartPlaceholder(el) {
   const name = el.getAttribute("name") || el.getAttribute("type") || "";
   const lang = document.documentElement.lang || navigator.language;
@@ -28,13 +19,26 @@ function applySmartPlaceholder(el) {
   }
 }
 
+const directive = {
+  mounted(el) {
+    // Vue 3
+    applySmartPlaceholder(el);
+  },
+  inserted(el) {
+    // Vue 2
+    applySmartPlaceholder(el);
+  },
+};
+
 export default {
   install(appOrVue) {
-    if (typeof appOrVue.directive === "function") {
-      appOrVue.directive("smart-placeholder", smartPlaceholderDirective);
+    const isVue3 =
+      typeof appOrVue.version === "string" && appOrVue.version.startsWith("3");
+    if (isVue3) {
+      appOrVue.directive("smart-placeholder", directive);
     } else {
       appOrVue.directive("smart-placeholder", {
-        inserted: smartPlaceholderDirective.inserted,
+        inserted: directive.inserted,
       });
     }
   },

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue 3 Smart Placeholders Demo</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../dist/vue-smart-placeholders.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 40px;
+      }
+      input,
+      textarea {
+        display: block;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <input name="fullName" v-smart-placeholder />
+      <input type="email" v-smart-placeholder />
+      <input name="password" v-smart-placeholder />
+      <input name="phone" v-smart-placeholder />
+      <textarea name="message" v-smart-placeholder></textarea>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      const app = createApp({
+        data() {
+          return {};
+        },
+      });
+
+      app.use(VueSmartPlaceholders);
+      app.mount("#app");
+    </script>
+  </body>
+</html>
