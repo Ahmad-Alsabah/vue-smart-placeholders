@@ -1,0 +1,9 @@
+{
+  "name": "vue-smart-placeholders",
+  "version": "0.1.0",
+  "description": "Vue directive that automatically adds context-aware, localized placeholders to inputs and textareas.",
+  "main": "dist/vue-smart-placeholders.min.js",
+  "module": "src/directive.js",
+  "author": "Ahmad Alsabah",
+  "license": "MIT"
+}
