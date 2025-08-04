@@ -5,5 +5,26 @@
   "main": "dist/vue-smart-placeholders.min.js",
   "module": "src/directive.js",
   "author": "Ahmad Alsabah",
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahmad-Alsabah/vue-smart-placeholders.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Ahmad-Alsabah/vue-smart-placeholders/issues"
+  },
+  "homepage": "https://github.com/Ahmad-Alsabah/vue-smart-placeholders#readme",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "rollup": "^2.79.2",
+    "rollup-plugin-terser": "^7.0.2"
+  }
 }
