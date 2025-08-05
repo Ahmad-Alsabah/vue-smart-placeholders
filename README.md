@@ -13,6 +13,9 @@ Supports both **Vue 2** and **Vue 3** ✅
 - 🔌 Tiny, dependency-free
 
 ---
+## 📸 Demo
+
+![vue-smart-placeholders demo](./assets/smart-placeholder-demo.gif)
 
 ## 📦 Installation
 
@@ -20,3 +23,4 @@ Supports both **Vue 2** and **Vue 3** ✅
 
 ```bash
 npm install vue-smart-placeholders
+
