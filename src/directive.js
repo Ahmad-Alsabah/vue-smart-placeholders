@@ -1,4 +1,11 @@
-function applySmartPlaceholder(el) {
+function applySmartPlaceholder(el, binding) {
+  if (binding.modifiers && binding.modifiers.ignore) return;
+
+  if (binding.value) {
+    el.setAttribute("placeholder", binding.value);
+    return;
+  }
+
   const name = el.getAttribute("name") || el.getAttribute("type") || "";
   const lang = document.documentElement.lang || navigator.language;
   const isArabic = lang.startsWith("ar");
@@ -11,22 +18,31 @@ function applySmartPlaceholder(el) {
     message: isArabic ? "اكتب رسالتك هنا" : "Write your message here",
   };
 
+  let matched = false;
   for (const key in placeholders) {
     if (name.toLowerCase().includes(key.toLowerCase())) {
       el.setAttribute("placeholder", placeholders[key]);
+      matched = true;
       break;
     }
+  }
+
+  if (!matched) {
+    el.setAttribute(
+      "placeholder",
+      isArabic ? "املأ هذا الحقل" : "Fill this field"
+    );
   }
 }
 
 const directive = {
-  mounted(el) {
+  mounted(el, binding) {
     // Vue 3
-    applySmartPlaceholder(el);
+    applySmartPlaceholder(el, binding);
   },
-  inserted(el) {
+  inserted(el, binding) {
     // Vue 2
-    applySmartPlaceholder(el);
+    applySmartPlaceholder(el, binding);
   },
 };
 

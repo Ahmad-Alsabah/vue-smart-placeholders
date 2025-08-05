@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>Vue Smart Placeholders Demo</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="../dist/vue-smart-placeholders.min.js"></script>
-</head>
-<body>
-  <div id="app">
-    <input name="fullName" v-smart-placeholder><br><br>
-    <input type="email" v-smart-placeholder><br><br>
-    <input name="password" v-smart-placeholder><br><br>
-    <input name="phone" v-smart-placeholder><br><br>
-    <textarea name="message" v-smart-placeholder></textarea>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Smart Placeholders Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../dist/vue-smart-placeholders.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input name="fullName" v-smart-placeholder /><br /><br />
+      <input type="email" v-smart-placeholder /><br /><br />
+      <input name="password" v-smart-placeholder /><br /><br />
+      <input name="phone" v-smart-placeholder /><br /><br />
+      <textarea name="message" v-smart-placeholder></textarea>
+    </div>
 
-  <script>
-    Vue.use(VueSmartPlaceholders) <!-- ✅ ضروري -->
-    new Vue({ el: '#app' })
-  </script>
-</body>
+    <script>
+      Vue.use(VueSmartPlaceholders);
+      new Vue({ el: "#app" });
+    </script>
+  </body>
 </html>
