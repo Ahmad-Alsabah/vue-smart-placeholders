@@ -1,6 +1,7 @@
 # 📦 vue-smart-placeholders
-![npm](https://img.shields.io/npm/v/vue-smart-placeholders)
-![downloads](https://img.shields.io/npm/dm/vue-smart-placeholders)
+[![npm](https://img.shields.io/npm/v/vue-smart-placeholders)](https://www.npmjs.com/package/vue-smart-placeholders)
+
+
 A Vue.js directive that adds **smart, localized placeholders** to your `<input>` and `<textarea>` elements — automatically based on field type or name.  
 Supports both **Vue 2** and **Vue 3** ✅
 
@@ -24,5 +25,6 @@ Supports both **Vue 2** and **Vue 3** ✅
 
 ```bash
 npm install vue-smart-placeholders
+
 
 
